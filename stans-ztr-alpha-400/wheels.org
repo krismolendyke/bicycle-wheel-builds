@@ -31,6 +31,8 @@
 
 ** Hub
 
+   [[file:hub-front.png]]
+
   #+name:front-hub
   | Attribute                       | Value |
   |---------------------------------+-------|
@@ -45,6 +47,8 @@
   | Hole diameter (mm)              |   2.4 |
 
 ** Rim
+
+   [[file:rim-front.png]]
 
   #+name:front-rim
   | Attribute                   |         Value |
@@ -80,6 +84,8 @@
 
 ** Hub
 
+   [[file:hub-rear.png]]
+
   #+name:rear-hub
   | Attribute                       | Value |
   |---------------------------------+-------|
@@ -94,6 +100,8 @@
   | Hole diameter (mm)              |   2.4 |
 
 ** Rim
+
+   [[file:rim-rear.png]]
 
   #+name:rear-rim
   | Attribute                   |         Value |
