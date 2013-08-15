@@ -1,0 +1,131 @@
+#+TITLE: Stans ZTR Alpha 400 Wheelset
+#+OPTIONS: toc:nil num:nil
+
+* Parts
+
+  - [ ] [[http://www.specialized.com/us/en/ftb/road-tires/cyclocross-tires/captain-cx-2br][Captain CX 2BR]] 34c tires
+  - [ ] [[http://www.notubes.com/Universal-44mm-Tubeless-Road-Valve-Stem-Pair-P163C16.aspx][44m road valve stems]]
+  - [ ] Stan's juice
+  - [ ] New rim brake pads
+
+* Spoke Length Calculation
+
+  \begin{equation}
+  \sqrt{R^2 + H^2 + F^2 - 2RH \cos\left(\frac {720} h X\right)} - \frac \Phi2
+  \end{equation}
+
+  - $R$ Rim radius to spoke ends (half of ERD)
+  - $H$ Hub flange radius to spoke holes
+  - $F$ Flange offset
+  - $X$ Cross pattern
+  - $h$ Hub spoke hole count
+  - $\Phi$ Hub spoke hole diameter
+
+* Front Wheel
+
+  #+name:front-wheel
+  | Attribute     | Value |
+  |---------------+-------|
+  | Spoke count   |    32 |
+  | Cross pattern |     3 |
+
+** Hub
+
+  #+name:front-hub
+  | Attribute                       | Value |
+  |---------------------------------+-------|
+  | Make                            | Surly |
+  | Model                           |   New |
+  | Flange diameter drive (mm)      |    54 |
+  | Flange diameter non-drive (mm)  |    54 |
+  | Center-to-flange drive (mm)     |  32.2 |
+  | Center-to-flange non-drive (mm) |  32.2 |
+  | Width (mm)                      |   100 |
+  | Hole count                      |    32 |
+  | Hole diameter (mm)              |   2.4 |
+
+** Rim
+
+  #+name:front-rim
+  | Attribute                   |         Value |
+  |-----------------------------+---------------|
+  | Make                        |         Stans |
+  | Model                       | ZTR Alpha 400 |
+  | Hole count                  |            32 |
+  | Width outer (mm)            |            20 |
+  | Width inner (mm)            |            17 |
+  | Designation                 |          700c |
+  | Weight (g)                  |           425 |
+  | Effective Rim Diameter (mm) |           592 |
+  | Tape width (mm)             |            21 |
+  | ISO diameter (mm)           |           622 |
+  | Brake                       |           rim |
+
+** Spoke Lengths
+
+  #+name:front
+  | Side      | ERD | $R$ | $R^2$ | Flange Diameter | $H$ | $H^2$ |  $F$ |   $F^2$ | $2RH$ | $X$ | $h$ | $\cos\left(\frac {720} h X\right)$ | $\Phi$ | Spoke Length |
+  |-----------+-----+-----+-------+-----------------+-----+-------+------+---------+-------+-----+-----+------------------------------------+--------+--------------|
+  | Drive     | 592 | 296 | 87616 |              54 |  27 |   729 | 32.2 | 1036.84 | 15984 |   3 |  32 |                         0.38268343 |    2.4 |    287.35680 |
+  | Non-drive | 592 | 296 | 87616 |              54 |  27 |   729 | 32.2 | 1036.84 | 15984 |   3 |  32 |                         0.38268343 |    2.4 |    287.35680 |
+  #+TBLFM: $2=remote(front-rim, @9$2)::$3=$2 / 2::$4=$3^ 2::$5=remote(front-hub, @4$2)::$6=$5/2::$7=$6^ 2::$9=$8^ 2::$10=2*$3*$6::$11=remote(front-wheel, @3$2)::$12=remote(front-wheel, @2$2)::$13=cos((720/$12)*$11);D::$14=remote(front-hub, @10$2)::$15=sqrt($4 + $7 + $9 - ($10 * $13)) - ($14 / 2)::@2$5=remote(front-hub, @4$2)::@2$8=remote(front-hub, @6$2)::@3$5=remote(front-hub, @5$2)::@3$8=remote(front-hub, @7$2)
+
+* Rear Wheel
+
+  #+name:rear-wheel
+  | Attribute     | Value |
+  |---------------+-------|
+  | Spoke count   |    32 |
+  | Cross pattern |     3 |
+
+** Hub
+
+  #+name:rear-hub
+  | Attribute                       | Value |
+  |---------------------------------+-------|
+  | Make                            | Surly |
+  | Model                           |   New |
+  | Width (mm)                      |   130 |
+  | Center-to-flange drive (mm)     |  31.5 |
+  | Center-to-flange non-drive (mm) |    33 |
+  | Flange diameter drive (mm)      |    54 |
+  | Flange diameter non-drive (mm)  |    54 |
+  | Hole count                      |    32 |
+  | Hole diameter (mm)              |   2.4 |
+
+** Rim
+
+  #+name:rear-rim
+  | Attribute                   |         Value |
+  |-----------------------------+---------------|
+  | Make                        |         Stans |
+  | Model                       | ZTR Alpha 400 |
+  | Hole count                  |            32 |
+  | Width outer (mm)            |            20 |
+  | Width inner (mm)            |            17 |
+  | Designation                 |          700c |
+  | Weight (g)                  |           425 |
+  | Effective Rim Diameter (mm) |           592 |
+  | Tape width (mm)             |            21 |
+  | ISO diameter (mm)           |           622 |
+  | Brake                       |           rim |
+
+** Spoke Lengths
+
+  #+name:rear
+  | Side      | ERD | $R$ | $R^2$ | Flange Diameter | $H$ | $H^2$ |  $F$ |  $F^2$ | $2RH$ | $X$ | $h$ | $\cos\left(\frac {720} h X\right)$ | $\Phi$ | Spoke Length |
+  |-----------+-----+-----+-------+-----------------+-----+-------+------+--------+-------+-----+-----+------------------------------------+--------+--------------|
+  | Drive     | 592 | 296 | 87616 |              54 |  27 |   729 | 31.5 | 992.25 | 15984 |   3 |  32 |                         0.38268343 |    2.4 |    287.27953 |
+  | Non-drive | 592 | 296 | 87616 |              54 |  27 |   729 |   33 |   1089 | 15984 |   3 |  32 |                         0.38268343 |    2.4 |    287.44717 |
+  #+TBLFM: $3=$2 / 2::$4=$3^ 2::$6=$5/2::$7=$6^ 2::$9=$8^ 2::$10=2*$3*$6::$11=remote(rear-wheel, @3$2)::$12=remote(rear-wheel, @2$2)::$13=cos((720/$12)*$11);D::$14=remote(rear-hub, @10$2)::$15=sqrt($4 + $7 + $9 - ($10 * $13)) - ($14 / 2)::@2$2=remote(rear-rim, @9$2)::@2$5=remote(rear-hub, @7$2)::@2$8=remote(rear-hub, @5$2)::@3$5=remote(rear-hub, @8$2)::@3$8=remote(rear-hub, @6$2)
+
+* Final Results
+
+  #+name:final-results
+  | Wheel | Side      | Spoke Length |
+  |-------+-----------+--------------|
+  | Front | Drive     |     287.3568 |
+  |       | Non-drive |     287.3568 |
+  | Rear  | Drive     |    287.27953 |
+  |       | Non-drive |    287.44717 |
+  #+TBLFM: $3=remote(front, @2$15)::@2$3=remote(front, @2$15)::@3$3=remote(front, @3$15)::@4$3=remote(rear, @2$15)::@5$3=remote(rear, @3$15)
