@@ -5,8 +5,10 @@
 
   - [ ] [[http://www.specialized.com/us/en/ftb/road-tires/cyclocross-tires/captain-cx-2br][Captain CX 2BR]] 34c tires
   - [ ] [[http://www.notubes.com/Universal-44mm-Tubeless-Road-Valve-Stem-Pair-P163C16.aspx][44m road valve stems]]
+  - [ ] 21mm rim tape
   - [ ] Stan's juice
   - [ ] New rim brake pads
+  - [ ] Front wheel skewer (rear wheel is bolt-on)
 
 * Spoke Length Calculation
 
