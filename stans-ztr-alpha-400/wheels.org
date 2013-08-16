@@ -134,8 +134,8 @@
   #+name:final-results
   | Wheel | Side      | Spoke Length |
   |-------+-----------+--------------|
-  | Front | Drive     |     287.3568 |
-  |       | Non-drive |     287.3568 |
-  | Rear  | Drive     |    287.27953 |
-  |       | Non-drive |    287.44717 |
-  #+TBLFM: $3=remote(front, @2$15)::@2$3=remote(front, @2$15)::@3$3=remote(front, @3$15)::@4$3=remote(rear, @2$15)::@5$3=remote(rear, @3$15)
+  | Front | Drive     |        287.4 |
+  |       | Non-drive |        287.4 |
+  | Rear  | Drive     |        287.3 |
+  |       | Non-drive |        287.4 |
+  #+TBLFM: $3=remote(front, @2$15)::@2$3=remote(front, @2$15);%.1f::@3$3=remote(front, @3$15);%.1f::@4$3=remote(rear, @2$15);%.1f::@5$3=remote(rear, @3$15);%.1f
