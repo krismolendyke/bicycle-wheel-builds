@@ -3,12 +3,23 @@
 
 * Parts
 
-  - [ ] [[http://www.specialized.com/us/en/ftb/road-tires/cyclocross-tires/captain-cx-2br][Captain CX 2BR]] 34c tires
-  - [ ] [[http://www.notubes.com/Universal-44mm-Tubeless-Road-Valve-Stem-Pair-P163C16.aspx][44m road valve stems]]
-  - [ ] 21mm rim tape
-  - [ ] Stan's juice
-  - [ ] New rim brake pads
-  - [ ] Front wheel skewer (rear wheel is bolt-on)
+  - [X] [[http://www.specialized.com/us/en/ftb/road-tires/cyclocross-tires/captain-cx-2br][Captain CX 2BR]] 34c tires
+  - [X] [[http://www.notubes.com/Universal-35mm-Mountain-Valve-Stem-Pair-P550C16.aspx][35mm mountain valve stems]]
+  - [X] 21mm rim tape
+  - [X] Stan's juice
+  - [X] New rim brake pads
+  - [X] Front wheel skewer (rear wheel is bolt-on)
+
+* Spokes
+
+  #+name:spokes
+  | Attribute | Value        |
+  |-----------+--------------|
+  | Make      | Sapim        |
+  | Model     | [[http://www.sapim.be/spokes/butted/d-light][D-Light]]      |
+  | Butting   | double       |
+  | Diameter  | 2.0/1.65/2.0 |
+  | Length    | 287.5        |
 
 * Spoke Length Calculation
 
