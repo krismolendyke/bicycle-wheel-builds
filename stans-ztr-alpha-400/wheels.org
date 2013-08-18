@@ -64,19 +64,21 @@
    [[file:rim-front.png]]
 
   #+name:front-rim
-  | Attribute                   |         Value |
-  |-----------------------------+---------------|
-  | Make                        |         Stans |
-  | Model                       | ZTR Alpha 400 |
-  | Hole count                  |            32 |
-  | Width outer (mm)            |            20 |
-  | Width inner (mm)            |            17 |
-  | Designation                 |          700c |
-  | Weight (g)                  |           425 |
-  | Effective Rim Diameter (mm) |           592 |
-  | Tape width (mm)             |            21 |
-  | ISO diameter (mm)           |           622 |
-  | Brake                       |           rim |
+  | Attribute                               |         Value |
+  |-----------------------------------------+---------------|
+  | Make                                    |         Stans |
+  | Model                                   | ZTR Alpha 400 |
+  | Hole count                              |            32 |
+  | Width outer (mm)                        |            20 |
+  | Width inner (mm)                        |            17 |
+  | Designation                             |          700c |
+  | Weight (g)                              |           425 |
+  | Effective Rim Diameter (mm)             |           592 |
+  | Tape width (mm)                         |            21 |
+  | ISO diameter (mm)                       |           622 |
+  | Brake                                   |           rim |
+  | Spoke tension ([[file:ztr-rim-specifications.pdf][KgF]])                     |           125 |
+  | Spoke tension ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) |            18 |
 
 ** Spoke Lengths
 
@@ -117,19 +119,21 @@
    [[file:rim-rear.png]]
 
   #+name:rear-rim
-  | Attribute                   |         Value |
-  |-----------------------------+---------------|
-  | Make                        |         Stans |
-  | Model                       | ZTR Alpha 400 |
-  | Hole count                  |            32 |
-  | Width outer (mm)            |            20 |
-  | Width inner (mm)            |            17 |
-  | Designation                 |          700c |
-  | Weight (g)                  |           425 |
-  | Effective Rim Diameter (mm) |           592 |
-  | Tape width (mm)             |            21 |
-  | ISO diameter (mm)           |           622 |
-  | Brake                       |           rim |
+  | Attribute                               |         Value |
+  |-----------------------------------------+---------------|
+  | Make                                    |         Stans |
+  | Model                                   | ZTR Alpha 400 |
+  | Hole count                              |            32 |
+  | Width outer (mm)                        |            20 |
+  | Width inner (mm)                        |            17 |
+  | Designation                             |          700c |
+  | Weight (g)                              |           425 |
+  | Effective Rim Diameter (mm)             |           592 |
+  | Tape width (mm)                         |            21 |
+  | ISO diameter (mm)                       |           622 |
+  | Brake                                   |           rim |
+  | Spoke tension ([[file:ztr-rim-specifications.pdf][KgF]])                     |           125 |
+  | Spoke tension ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) |            18 |
 
 ** Spoke Lengths
 
