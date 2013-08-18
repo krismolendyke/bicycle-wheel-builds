@@ -13,13 +13,13 @@
 * Spokes
 
   #+name:spokes
-  | Attribute | Value        |
-  |-----------+--------------|
-  | Make      | Sapim        |
-  | Model     | [[http://www.sapim.be/spokes/butted/d-light][D-Light]]      |
-  | Butting   | double       |
-  | Diameter  | 2.0/1.65/2.0 |
-  | Length    | 287.5        |
+  | Attribute | Value       |
+  |-----------+-------------|
+  | Make      | Sapim       |
+  | Model     | [[http://www.sapim.be/spokes/butted/laser][Laser]]       |
+  | Butting   | double      |
+  | Diameter  | 2.0/1.5/2.0 |
+  | Length    | 287.5       |
 
 * Spoke Length Calculation
 
