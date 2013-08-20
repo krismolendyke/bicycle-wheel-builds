@@ -10,17 +10,6 @@
   - [X] New rim brake pads
   - [X] Front wheel skewer (rear wheel is bolt-on)
 
-* Spokes
-
-  #+name:spokes
-  | Attribute | Value       |
-  |-----------+-------------|
-  | Make      | Sapim       |
-  | Model     | [[http://www.sapim.be/spokes/butted/laser][Laser]]       |
-  | Butting   | double      |
-  | Diameter  | 2.0/1.5/2.0 |
-  | Length    | 287.5       |
-
 * Spoke Length Calculation
 
   \begin{equation}
@@ -88,6 +77,17 @@
   | Drive     | 592 | 296 | 87616 |              54 |  27 |  729 | 32.2 | 1036.84 | 15984 |   3 |  32 |                         0.38268343 | 2.4 |    287.35680 |
   | Non-drive | 592 | 296 | 87616 |              54 |  27 |  729 | 32.2 | 1036.84 | 15984 |   3 |  32 |                         0.38268343 | 2.4 |    287.35680 |
   #+TBLFM: $2=remote(front-rim, @9$2)::$3=$2 / 2::$4=$3^ 2::$5=remote(front-hub, @4$2)::$6=$5/2::$7=$6^ 2::$9=$8^ 2::$10=2*$3*$6::$11=remote(front-wheel, @3$2)::$12=remote(front-wheel, @2$2)::$13=cos((720/$12)*$11);D::$14=remote(front-hub, @10$2)::$15=sqrt($4 + $7 + $9 - ($10 * $13)) - ($14 / 2)::@2$5=remote(front-hub, @4$2)::@2$8=remote(front-hub, @6$2)::@3$5=remote(front-hub, @5$2)::@3$8=remote(front-hub, @7$2)
+
+** Spokes
+
+   #+name:front-spokes
+   | Attribute | Value       |
+   |-----------+-------------|
+   | Make      | Sapim       |
+   | Model     | [[http://www.sapim.be/spokes/butted/laser][Laser]]       |
+   | Butting   | double      |
+   | Diameter  | 2.0/1.5/2.0 |
+   | Length    | 287.5       |
 
 ** Spoke Tensions
 
@@ -188,6 +188,17 @@
   | Drive     | 592 | 296 | 87616 |              54 |  27 |  729 | 31.5 | 992.25 | 15984 |   3 |  32 |                         0.38268343 | 2.4 |    287.27953 |
   | Non-drive | 592 | 296 | 87616 |              54 |  27 |  729 |   33 |   1089 | 15984 |   3 |  32 |                         0.38268343 | 2.4 |    287.44717 |
   #+TBLFM: $3=$2 / 2::$4=$3^ 2::$6=$5/2::$7=$6^ 2::$9=$8^ 2::$10=2*$3*$6::$11=remote(rear-wheel, @3$2)::$12=remote(rear-wheel, @2$2)::$13=cos((720/$12)*$11);D::$14=remote(rear-hub, @10$2)::$15=sqrt($4 + $7 + $9 - ($10 * $13)) - ($14 / 2)::@2$2=remote(rear-rim, @9$2)::@2$5=remote(rear-hub, @7$2)::@2$8=remote(rear-hub, @5$2)::@3$5=remote(rear-hub, @8$2)::@3$8=remote(rear-hub, @6$2)
+
+** Spokes
+
+   #+name:rear-spokes
+   | Attribute | Value       |
+   |-----------+-------------|
+   | Make      | Sapim       |
+   | Model     | [[http://www.sapim.be/spokes/butted/laser][Laser]]       |
+   | Butting   | double      |
+   | Diameter  | 2.0/1.5/2.0 |
+   | Length    | 287.5       |
 
 ** Spoke Tensions
 
