@@ -124,12 +124,12 @@
 
     | Average | Lower Bound | Upper Bound |
     |---------+-------------+-------------|
-    |      19 | 15.2        | 22.8        |
+    |      19 |        15.2 |        22.8 |
     #+TBLFM: @2$1=remote(front-spoke-deflection, @II$2)::@2$2=@2$1*0.8;%.1f::@2$3=1.2*@2$1;%.1f
 
 *** Final Results
 
-    | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading)]] | Average (KgF) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
+    | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading)]] | Average ([[file:tm-1-tension-meter-conversion-table.pdf][KgF]]) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
     |-----------------------------------+---------------+--------------+--------------|
     |                                19 |           133 |          125 |          6.4 |
     #+TBLFM: @2$3=remote(front-rim, @13$2)::@2$4=100*(($2/$3)-1);%.1f
@@ -188,6 +188,53 @@
   | Drive     | 592 | 296 | 87616 |              54 |  27 |  729 | 31.5 | 992.25 | 15984 |   3 |  32 |                         0.38268343 | 2.4 |    287.27953 |
   | Non-drive | 592 | 296 | 87616 |              54 |  27 |  729 |   33 |   1089 | 15984 |   3 |  32 |                         0.38268343 | 2.4 |    287.44717 |
   #+TBLFM: $3=$2 / 2::$4=$3^ 2::$6=$5/2::$7=$6^ 2::$9=$8^ 2::$10=2*$3*$6::$11=remote(rear-wheel, @3$2)::$12=remote(rear-wheel, @2$2)::$13=cos((720/$12)*$11);D::$14=remote(rear-hub, @10$2)::$15=sqrt($4 + $7 + $9 - ($10 * $13)) - ($14 / 2)::@2$2=remote(rear-rim, @9$2)::@2$5=remote(rear-hub, @7$2)::@2$8=remote(rear-hub, @5$2)::@3$5=remote(rear-hub, @8$2)::@3$8=remote(rear-hub, @6$2)
+
+** Spoke Tensions
+
+*** Deflection Readings
+
+    Average spoke tension.
+
+    #+name:rear-spoke-deflection
+    |   Spoke | Non-drive | Drive |
+    |---------+-----------+-------|
+    |       1 |        19 |    19 |
+    |       2 |        17 |    19 |
+    |       3 |        19 |    20 |
+    |       4 |        18 |    18 |
+    |       5 |        18 |    20 |
+    |       6 |        18 |    20 |
+    |       7 |        19 |    20 |
+    |       8 |        17 |    19 |
+    |       9 |        19 |    20 |
+    |      10 |        18 |    20 |
+    |      11 |        19 |    18 |
+    |      12 |        18 |    20 |
+    |      13 |        19 |    20 |
+    |      14 |        19 |    18 |
+    |      15 |        17 |    20 |
+    |      16 |        19 |    19 |
+    |---------+-----------+-------|
+    | Average |        18 |    19 |
+    #+TBLFM: @18$2=vmean(@I..II);%.0f::@18$3=vmean(@I..II);%.0f
+
+*** Deflection Tolerances
+
+    Relative spoke tension.
+
+    | Side      | Average | Lower Bound | Upper Bound |
+    |-----------+---------+-------------+-------------|
+    | Non-drive |      18 |        14.4 |        21.6 |
+    | Drive     |      19 |        15.2 |        22.8 |
+    #+TBLFM: $3=$2*0.8;%.1f::$4=$2*1.2;%.1f::@2$2=remote(rear-spoke-deflection, @II$2)::@3$2=remote(rear-spoke-deflection, @II$3)::@3$3=@3$2*0.8;%.1f::@3$4=1.2*@3$2;%.1f
+
+*** Final Results
+
+    | Side      | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading)]] | Average ([[file:tm-1-tension-meter-conversion-table.pdf][KgF]]) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
+    |-----------+-----------------------------------+---------------+--------------+--------------|
+    | Non-drive |                                18 |           119 |          125 |         -4.8 |
+    | Drive     |                                19 |           133 |          125 |          6.4 |
+    #+TBLFM: $5=100*(($3/$4)-1);%.1f::@2$2=remote(rear-spoke-deflection, @II$2)::@3$2=remote(rear-spoke-deflection, @II$3)::@3$4=remote(front-rim, @13$2)::@3$5=100*(($3/$4)-1);%.1f
 
 * Final Results
 
