@@ -129,7 +129,7 @@
 
 *** Final Results
 
-    | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading)]] | Average ([[file:tm-1-tension-meter-conversion-table.pdf][KgF]]) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
+    | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) | Average ([[file:tm-1-tension-meter-conversion-table.pdf][KgF]]) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
     |-----------------------------------+---------------+--------------+--------------|
     |                                19 |           133 |          125 |          6.4 |
     #+TBLFM: @2$3=remote(front-rim, @13$2)::@2$4=100*(($2/$3)-1);%.1f
@@ -230,7 +230,7 @@
 
 *** Final Results
 
-    | Side      | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading)]] | Average ([[file:tm-1-tension-meter-conversion-table.pdf][KgF]]) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
+    | Side      | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) | Average ([[file:tm-1-tension-meter-conversion-table.pdf][KgF]]) | Target ([[file:ztr-rim-specifications.pdf][KgF]]) | Accuracy (%) |
     |-----------+-----------------------------------+---------------+--------------+--------------|
     | Non-drive |                                18 |           119 |          125 |         -4.8 |
     | Drive     |                                19 |           133 |          125 |          6.4 |
