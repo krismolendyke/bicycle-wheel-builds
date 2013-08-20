@@ -1,5 +1,5 @@
 #+TITLE: Stans ZTR Alpha 400 Wheelset
-#+OPTIONS: toc:nil num:nil
+#+OPTIONS: toc:2 num:nil
 
 * Parts
 
