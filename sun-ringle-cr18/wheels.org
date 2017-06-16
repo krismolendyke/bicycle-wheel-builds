@@ -1,0 +1,307 @@
+#+TITLE: Sun Ringlé CR18 Wheelset
+#+OPTIONS: toc:2 num:nil
+
+A heavy duty wheelset for loaded touring.
+
+* Parts
+
+  - [ ] 16mm rim tape
+  - [ ] New rim brake pads
+  - [ ] Schrader → presta rim hole adaptors
+  - [ ] Tires
+
+* Spoke Length Calculation
+
+  \begin{equation}
+  \sqrt{R^2 + H^2 + F^2 - 2RH \cos\left(\frac {720} h X\right)} - \frac \Phi2
+  \end{equation}
+
+  - $R$ Rim radius to spoke ends (half of ERD)
+  - $H$ Hub flange radius to spoke holes
+  - $F$ Flange offset
+  - $X$ Cross pattern
+  - $h$ Hub spoke hole count
+  - $\Phi$ Hub spoke hole diameter
+
+* Front Wheel
+
+  #+name:front-wheel
+  | Attribute     | Value |
+  |---------------+-------|
+  | Spoke count   |    36 |
+  | Cross pattern |     3 |
+
+** Hub
+
+   [[file:hub-front.jpg]]
+   [[file:hub-front-dimensions.png]]
+
+  #+name:front-hub
+  | Attribute                       |         Value |
+  |---------------------------------+---------------|
+  | Make                            |       Shimano |
+  | Model                           | HB-T610 Deore |
+  | Width (mm)                      |           100 |
+  | Hole count                      |            36 |
+  | Hole diameter (mm)              |           2.5 |
+
+*** Flanges
+
+    #+name:front-hub-flanges
+    | Attribute             | Non-Drive | Drive |
+    |-----------------------+-----------+-------|
+    | Flange diameter (mm)  |        38 |    38 |
+    | Center-to-flange (mm) |      34.5 |  34.5 |
+
+** Rim
+
+   [[file:rim-front.png]]
+   [[file:rim-front-dimensions.png]]
+
+  #+name:front-rim
+  | Attribute                               |      Value |
+  |-----------------------------------------+------------|
+  | Make                                    | Sun Ringlé |
+  | Model                                   |       CR18 |
+  | Hole count                              |         36 |
+  | Width outer (mm)                        |       22.5 |
+  | Width inner (mm)                        |       20.0 |
+  | Designation                             |       700c |
+  | Weight (g)                              |        460 |
+  | Effective Rim Diameter (mm)             |        612 |
+  | Tape width (mm)                         |         21 |
+  | ISO diameter (mm)                       |        622 |
+  | Brake                                   |        rim |
+  | Spoke tension (KgF)                     |        110 |
+  | Spoke tension ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) |         21 |
+
+  Max spoke tension according to the [[https://sun-ringle.com/support/][Sun Ringlè support page]] is 110
+  KgF.
+
+** Spoke Lengths
+
+  #+name:front
+  |                                    | Non-drive |   Drive |
+  |------------------------------------+-----------+---------|
+  | Effective Rim Diameter             |       612 |     612 |
+  | $R$                                |       306 |     306 |
+  | $R^2$                               |     93636 |   93636 |
+  | Flange Diameter                    |        38 |      38 |
+  | $H$                                |        19 |      19 |
+  | $H^2$                               |       361 |     361 |
+  | $F$                                |      34.5 |    34.5 |
+  | $F^2$                               |   1190.25 | 1190.25 |
+  | $2RH$                              |     11628 |   11628 |
+  | $X$                                |         3 |       3 |
+  | $h$                                |        36 |      36 |
+  | $\cos\left(\frac {720} h X\right)$ |       0.5 |     0.5 |
+  | $\Phi$                                |       2.5 |     2.5 |
+  | Spoke Length                       |     297.7 |   297.7 |
+  #+TBLFM: @2$3..@2$2=remote(front-rim, @9$2)::@3$3..@3$2=@-1$3/2::@4$3..@4$2=@-1^2::@5$2=remote(front-hub-flanges, @2$2)::@5$3=remote(front-hub-flanges, @2$3)::@6$2..@6$3=@-1/2::@7$2..@7$3=@-1^2::@8$2=remote(front-hub-flanges, @3$2)::@8$3=remote(front-hub-flanges, @3$3)::@9$2..@9$3=@-1^2::@10$2..@10$3=2*@-7$0*@-4$0::@11$2..@11$3=remote(front-wheel, @3$2)::@12$2..@12$3=remote(front-wheel, @2$2)::@13$2..@13$3=cos((720/@-1$0)*@-2)::@14$2..@14$3=remote(front-hub, @6$2)::@15$2..@15$3=sqrt(@4$0 + @7$0 + @9$0 - (2 * @3$0 * @6$0 @13$0)) - (@14$0 / 2); %.1f
+
+** Spokes
+
+   #+name:front-spokes
+   | Attribute | Value       |
+   |-----------+-------------|
+   | Make      | DT          |
+   | Model     | Competition |
+   | Butting   | double      |
+   | Diameter  | 2.0/1.8/2.0 |
+
+** Spoke Tensions
+
+*** Deflection Readings
+
+    Average spoke tension.
+
+    #+name:front-spoke-deflection
+    |   Spoke | Non-drive | Drive |
+    |---------+-----------+-------|
+    |       1 |           |       |
+    |       2 |           |       |
+    |       3 |           |       |
+    |       4 |           |       |
+    |       5 |           |       |
+    |       6 |           |       |
+    |       7 |           |       |
+    |       8 |           |       |
+    |       9 |           |       |
+    |      10 |           |       |
+    |      11 |           |       |
+    |      12 |           |       |
+    |      13 |           |       |
+    |      14 |           |       |
+    |      15 |           |       |
+    |      16 |           |       |
+    |      17 |           |       |
+    |      18 |           |       |
+    |---------+-----------+-------|
+    | Average |         0 |     0 |
+    #+TBLFM: @20$2=vmean(@I..II);%.0f::@20$3=vmean(@I..II);%.0f
+
+*** Deflection Tolerances
+
+    Relative spoke tension.
+
+    | Side      | Average | Lower Bound | Upper Bound |
+    |-----------+---------+-------------+-------------|
+    | Drive     |       0 |         0.0 |         0.0 |
+    | Non-drive |       0 |         0.0 |         0.0 |
+    #+TBLFM: $3=$2*0.8;%.1f::$4=$2*1.2;%.1f::@2$2=remote(front-spoke-deflection, @II$3)::@2$3=@2$2*0.8;%.1f::@2$4=1.2*@2$2;%.1f::@3$2=remote(front-spoke-deflection, @II$2)
+
+*** Final Results
+
+    | Side      | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) | Average (KgF) | Target (KgF) | Accuracy (%) |
+    |-----------+-----------------------------------+---------------+--------------+--------------|
+    | Drive     |                                 0 |             0 |          110 |       -100.0 |
+    | Non-drive |                                 0 |             0 |          110 |       -100.0 |
+    #+TBLFM: $5=100*(($3/$4)-1);%.1f::@3$2=remote(front-spoke-deflection, @II$2)::@3$4=remote(front-rim, @13$2)::@2$2=remote(front-spoke-deflection, @II$3)::@2$4=remote(front-rim, @13$2)
+
+* Rear Wheel
+
+  #+name:rear-wheel
+  | Attribute     | Value |
+  |---------------+-------|
+  | Spoke count   |    36 |
+  | Cross pattern |     3 |
+
+** Hub
+
+   [[file:hub-rear.jpg]]
+   [[file:hub-rear-dimensions.png]]
+
+   #+name:rear-hub
+   | Attribute          |         Value |
+   |--------------------+---------------|
+   | Make               |       Shimano |
+   | Model              | HB-T610 Deore |
+   | Hole count         |            36 |
+   | Width (mm)         |           135 |
+   | Hole diameter (mm) |           2.5 |
+
+*** Flanges
+
+    #+name:rear-hub-flanges
+    | Attribute             | Non-Drive | Drive |
+    |-----------------------+-----------+-------|
+    | Flange diameter (mm)  |      45.5 |  45.5 |
+    | Center-to-flange (mm) |        35 |  19.5 |
+
+** Rim
+
+   [[file:rim-rear.png]]
+   [[file:rim-rear-dimensions.png]]
+
+  #+name:rear-rim
+  | Attribute                               |      Value |
+  |-----------------------------------------+------------|
+  | Make                                    | Sun Ringlé |
+  | Model                                   |       CR18 |
+  | Hole count                              |         36 |
+  | Width outer (mm)                        |       22.5 |
+  | Width inner (mm)                        |       20.0 |
+  | Designation                             |       700c |
+  | Weight (g)                              |        460 |
+  | Effective Rim Diameter (mm)             |        612 |
+  | Tape width (mm)                         |         21 |
+  | ISO diameter (mm)                       |        622 |
+  | Brake                                   |        rim |
+  | Spoke tension (KgF)                     |        110 |
+  | Spoke tension ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) |         21 |
+
+  Max spoke tension according to the [[https://sun-ringle.com/support/][Sun Ringlè support page]] is 110
+  KgF.
+
+** Spoke Lengths
+
+  #+name:rear
+  |                                    | Non-drive |    Drive |
+  |------------------------------------+-----------+----------|
+  | Effective Rim Diameter             |       612 |      612 |
+  | $R$                                |       306 |      306 |
+  | $R^2$                               |     93636 |    93636 |
+  | Flange Diameter                    |      45.5 |     45.5 |
+  | $H$                                |     22.75 |    22.75 |
+  | $H^2$                               |  517.5625 | 517.5625 |
+  | $F$                                |        35 |     19.5 |
+  | $F^2$                               |      1225 |   380.25 |
+  | $2RH$                              |    13923. |   13923. |
+  | $X$                                |         3 |        3 |
+  | $h$                                |        36 |       36 |
+  | $\cos\left(\frac {720} h X\right)$ |       0.5 |      0.5 |
+  | $\Phi$                                |       2.5 |      2.5 |
+  | Spoke Length                       |     296.1 |    294.7 |
+  #+TBLFM: @2$3..@2$2=remote(rear-rim, @9$2)::@3$3..@3$2=@-1$3/2::@4$3..@4$2=@-1^2::@5$2=remote(rear-hub-flanges, @2$2)::@5$3=remote(rear-hub-flanges, @2$3)::@6$2..@6$3=@-1/2::@7$2..@7$3=@-1^2::@8$2=remote(rear-hub-flanges, @3$2)::@8$3=remote(rear-hub-flanges, @3$3)::@9$2..@9$3=@-1^2::@10$2..@10$3=2*@-7$0*@-4$0::@11$2..@11$3=remote(rear-wheel, @3$2)::@12$2..@12$3=remote(rear-wheel, @2$2)::@13$2..@13$3=cos((720/@-1$0)*@-2)::@14$2..@14$3=remote(rear-hub, @6$2)::@15$2..@15$3=sqrt(@4$0 + @7$0 + @9$0 - (2 * @3$0 * @6$0 @13$0)) - (@14$0 / 2); %.1f
+
+** Spokes
+
+   #+name:rear-spokes
+   | Attribute | Value       |
+   |-----------+-------------|
+   | Make      | DT          |
+   | Model     | Competition |
+   | Butting   | double      |
+   | Diameter  | 2.0/1.8/2.0 |
+
+** Spoke Tensions
+
+*** Deflection Readings
+
+    Average spoke tension.
+
+    #+name:rear-spoke-deflection
+    |   Spoke | Non-drive | Drive |
+    |---------+-----------+-------|
+    |       1 |           |       |
+    |       2 |           |       |
+    |       3 |           |       |
+    |       4 |           |       |
+    |       5 |           |       |
+    |       6 |           |       |
+    |       7 |           |       |
+    |       8 |           |       |
+    |       9 |           |       |
+    |      10 |           |       |
+    |      11 |           |       |
+    |      12 |           |       |
+    |      13 |           |       |
+    |      14 |           |       |
+    |      15 |           |       |
+    |      16 |           |       |
+    |      17 |           |       |
+    |      18 |           |       |
+    |---------+-----------+-------|
+    | Average |         0 |     0 |
+    #+TBLFM: @20$2=vmean(@I..II);%.0f::@20$3=vmean(@I..II);%.0f
+
+*** Deflection Tolerances
+
+    Relative spoke tension.
+
+    | Side      | Average | Lower Bound | Upper Bound |
+    |-----------+---------+-------------+-------------|
+    | Drive     |       0 |         0.0 |         0.0 |
+    | Non-drive |       0 |         0.0 |         0.0 |
+    #+TBLFM: $3=$2*0.8;%.1f::$4=$2*1.2;%.1f::@3$2=remote(rear-spoke-deflection, @II$2)::@2$2=remote(rear-spoke-deflection, @II$3)::@2$3=@2$2*0.8;%.1f::@2$4=1.2*@2$2;%.1f
+
+*** Final Results
+
+    | Side      | Average ([[file:tm-1-tension-meter-conversion-table.pdf][TM-1 Deflection Reading]]) | Average (KgF) | Target (KgF) | Accuracy (%) |
+    |-----------+-----------------------------------+---------------+--------------+--------------|
+    | Drive     |                                 0 |             0 |          110 |       -100.0 |
+    | Non-drive |                                 0 |             0 |          110 |       -100.0 |
+    #+TBLFM: $5=100*(($3/$4)-1);%.1f::@3$2=remote(rear-spoke-deflection, @II$2)::@3$4=remote(rear-rim, @13$2)::@2$2=remote(rear-spoke-deflection, @II$3)::@2$4=remote(rear-rim, @13$2)
+
+* Final Results
+
+  #+name:final-results
+  | Wheel | Side      | Spoke Length | Count |
+  |-------+-----------+--------------+-------|
+  | Front | Drive     |        297.7 |    18 |
+  |       | Non-drive |        297.7 |    18 |
+  | Rear  | Drive     |        294.7 |    18 |
+  |       | Non-drive |        296.1 |    18 |
+  |-------+-----------+--------------+-------|
+  | Total |           |              |    72 |
+  #+TBLFM: @2$3=remote(front, @2$15);%.1f::@2$4=remote(front-wheel, @2$2) / 2::@3$3=remote(front, @3$15);%.1f::@3$4=remote(front-wheel, @2$2) / 2::@4$3=remote(rear, @2$15);%.1f::@4$4=remote(rear-wheel, @2$2) / 2::@5$3=remote(rear, @3$15);%.1f::@5$4=remote(rear-wheel, @2$2) / 2::@6$4=vsum(@I..II)
