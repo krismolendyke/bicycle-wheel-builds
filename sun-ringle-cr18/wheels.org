@@ -37,13 +37,13 @@ A heavy duty wheelset for loaded touring.
    [[file:hub-front-dimensions.png]]
 
   #+name:front-hub
-  | Attribute                       |         Value |
-  |---------------------------------+---------------|
-  | Make                            |       Shimano |
-  | Model                           | HB-T610 Deore |
-  | Width (mm)                      |           100 |
-  | Hole count                      |            36 |
-  | Hole diameter (mm)              |           2.5 |
+  | Attribute          |         Value |
+  |--------------------+---------------|
+  | Make               |       Shimano |
+  | Model              | HB-T610 Deore |
+  | Width (mm)         |           100 |
+  | Hole count         |            36 |
+  | Hole diameter (mm) |           2.5 |
 
 *** Flanges
 
