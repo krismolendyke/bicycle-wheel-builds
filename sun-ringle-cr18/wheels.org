@@ -5,8 +5,8 @@ A heavy duty wheelset for loaded touring.
 
 * Parts
 
-  - [ ] 16mm rim tape
-  - [ ] New rim brake pads
+  - [X] 16mm rim tape
+  - [X] New rim brake pads
   - [ ] Schrader → presta rim hole adaptors
   - [ ] Tires
 
