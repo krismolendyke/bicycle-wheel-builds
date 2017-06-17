@@ -295,13 +295,23 @@ A heavy duty wheelset for loaded touring.
 
 * Final Results
 
-  #+name:final-results
-  | Wheel | Side      | Spoke Length | Count |
-  |-------+-----------+--------------+-------|
-  | Front | Drive     |        297.7 |    18 |
-  |       | Non-drive |        297.7 |    18 |
-  | Rear  | Drive     |        294.7 |    18 |
-  |       | Non-drive |        296.1 |    18 |
-  |-------+-----------+--------------+-------|
-  | Total |           |              |    72 |
-  #+TBLFM: @2$3=remote(front, @2$15);%.1f::@2$4=remote(front-wheel, @2$2) / 2::@3$3=remote(front, @3$15);%.1f::@3$4=remote(front-wheel, @2$2) / 2::@4$3=remote(rear, @2$15);%.1f::@4$4=remote(rear-wheel, @2$2) / 2::@5$3=remote(rear, @3$15);%.1f::@5$4=remote(rear-wheel, @2$2) / 2::@6$4=vsum(@I..II)
+** Front Wheel
+
+   | Spoke  | Non-drive | Drive |
+   |--------+-----------+-------|
+   | Count  |        18 |    18 |
+   | Length |     297.7 | 297.7 |
+   #+TBLFM: @2$2=remote(front-wheel, @2$2) / 2::@2$3=remote(front-wheel, @2$2) / 2::@3$2=remote(front, @15$2)::@3$3=remote(front, @15$3)
+
+   - 36 298mm
+
+** Rear Wheel
+
+   | Spoke  | Non-drive | Drive |
+   |--------+-----------+-------|
+   | Count  |        18 |    18 |
+   | Length |     296.1 | 294.7 |
+   #+TBLFM: @2$2=remote(rear-wheel, @2$2) / 2::@2$3=remote(rear-wheel, @2$2) / 2::@3$2=remote(rear, @15$2)::@3$3=remote(rear, @15$3)
+
+   - 18 296mm
+   - 18 295mm
